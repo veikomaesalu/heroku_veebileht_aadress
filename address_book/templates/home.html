@@ -1,4 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 	<h1>Hello world!</h1>
+	{% if all_addresses %}
+		{% for records in all_addresses %}
+			{{ records.name }}<br/>
+			{{ records.phone }}<br/>
+			{{ records.address }}<br/>
+			{{ records.email }}<br/>
+			<br/>
+		{% endfor %}
+	{% endif %}
+	
 {% endblock %}
