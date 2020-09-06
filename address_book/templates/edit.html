@@ -3,7 +3,7 @@
 {% block content %}
 
 <h1>Hello world!</h1>
-{% if get_address %}:
+{% if get_address %}
 	<form method="POST">
 	{% csrf_token %}
   		<div class="form-group">
@@ -21,7 +21,8 @@
  
  	<button type="submit" class="btn btn-secondary">Edit Address</button>
 	</form>
-
+</br>
+</br>
 	<form method="POST" action="{% url 'delete' get_address.id %}">
 		{% csrf_token %}
 		<button type="submit" class="btn btn-secondary">Delete Address</button>
